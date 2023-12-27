@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   get "/health", to: "application#index"
-  resources :todos
+  namespace 'api' do
+    resources :todos
+  end
 end
